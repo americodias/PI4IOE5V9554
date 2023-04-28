@@ -1,19 +1,19 @@
 {
-    "name": "PI4IOE5V6416",
-    "keywords": "i2c,mux,io expander,PI4IOE5V6416",
-    "description": "Arduino library for PI4IOE5V6416 (16-bit general-purpose I/O expander that provides remote I/O expansion for most microcontroller families via the I2C-bus interface)",
+    "name": "PI4IOE5V9554",
+    "keywords": "i2c,mux,io expander,PI4IOE5V9554",
+    "description": "Arduino library for PI4IOE5V9554 (8-bit general-purpose I/O expander that provides remote I/O expansion for most microcontroller families via the I2C-bus interface)",
     "repository":
     {
         "type": "git",
-        "url": "https://github.com/ponoor/PI4IOE5V6416"
+        "url": "https://github.com/americodias/PI4IOE5V9554"
     },
     "authors":
     {
-        "name": "Ponoor Experiments inc.",
-        "url": "https://github.com/ponoor",
+        "name": "Américo Dias",
+        "url": "https://github.com/americodias",
         "maintainer": true
     },
-    "version": "0.2.0",
+    "version": "0.1.0",
     "license": "MIT",
     "frameworks": "arduino",
     "platforms": "*"

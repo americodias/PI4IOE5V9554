@@ -1,6 +1,6 @@
-#include <PCA95x5.h>
+#include <PI4IOE5V9554.h>
 
-PCA9555 ioex;
+PI4IOE5V9554 ioex;
 
 void setup() {
     Serial.begin(115200);
@@ -8,8 +8,8 @@ void setup() {
 
     Wire.begin();
     ioex.attach(Wire);
-    ioex.polarity(PCA95x5::Polarity::ORIGINAL_ALL);
-    ioex.direction(PCA95x5::Direction::IN_ALL);
+    ioex.polarity(PI4IOE5V95XX::Polarity::ORIGINAL_ALL);
+    ioex.direction(PI4IOE5V95XX::Direction::IN_ALL);
 }
 
 void loop() {
