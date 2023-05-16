@@ -143,10 +143,15 @@ private:
     int8_t read_bytes(const uint8_t dev, const uint8_t reg, uint8_t* data, const uint8_t size) {
         wire->beginTransmission(dev);
         wire->write(reg);
-        wire->endTransmission();
+        wire->endTransmission(true);
         wire->requestFrom(dev, size);
         int8_t count = 0;
-        while (wire->available()) data[count++] = wire->read();
+        while (wire->available())
+        {
+            data[count++] = wire->read();
+            if(count >= size) break;
+        }
+        wire->endTransmission(true);
         return count;
     }
 
@@ -154,7 +159,7 @@ private:
         wire->beginTransmission(dev);
         wire->write(reg);
         for (uint8_t i = 0; i < size; i++) wire->write(data[i]);
-        status = wire->endTransmission();
+        status = wire->endTransmission(true);
         return (status == 0);
     }
 };
